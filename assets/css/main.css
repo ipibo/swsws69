@@ -1,6 +1,13 @@
+@import url("https://use.typekit.net/bie2kmz.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .darkBlue {
+}
+
+@font-face {
+    font-family: "ThreeSix21Pro";
+    src: url("../fonts/ThreeSix21Pro.woff") format("woff");
 }

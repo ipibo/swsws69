@@ -1,12 +1,13 @@
 <template>
     <div class="">
-        <img :src="headerIcon" alt="Header Icon">
+        <div class="bg-primaryBlue ">
+            <h1 class="text-[120px] font-ThreeSix21Pro text-secondaryBlue">SWSWS69</h1>
+        </div>
     </div>
 </template>
 
 <script setup>
 
-import headerIcon from '@/assets/svg/header.svg';
 
 </script>
 
