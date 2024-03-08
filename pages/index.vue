@@ -58,25 +58,19 @@ generateRandomImageUrl();
                 Eventsssssss......
             </h1>
 
-            <div class="">
-                <text-block
-                    class="bg-primaryGrey text-secondaryGrey float-left"
-                >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Eligendi a reiciendis provident, reprehenderit earum odio,
-                    sed inventore animi fugiat iusto eos unde! Dignissimos, sint
-                    mollitia maxime aperiam delectus perspiciatis ipsam.
-                </text-block>
+            <text-block class="bg-primaryGrey text-secondaryGrey float-left">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Eligendi a reiciendis provident, reprehenderit earum odio, sed
+                inventore animi fugiat iusto eos unde! Dignissimos, sint
+                mollitia maxime aperiam delectus perspiciatis ipsam.
+            </text-block>
 
-                <text-block
-                    class="bg-primaryGreen text-secondaryGreen float-left"
-                >
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Eligendi a reiciendis provident, reprehenderit earum odio,
-                    sed inventore animi fugiat iusto eos unde! Dignissimos, sint
-                    mollitia maxime aperiam delectus perspiciatis ipsam.
-                </text-block>
-            </div>
+            <text-block class="bg-primaryGreen text-secondaryGreen float-left">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Eligendi a reiciendis provident, reprehenderit earum odio, sed
+                inventore animi fugiat iusto eos unde! Dignissimos, sint
+                mollitia maxime aperiam delectus perspiciatis ipsam.
+            </text-block>
         </div>
 
         <!-- <eyes class="" /> -->
