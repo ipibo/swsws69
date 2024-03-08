@@ -80,7 +80,9 @@ onBeforeUnmount(() => {
                 sed inventore animi fugiat iusto eos unde! Dignissimos, sint
                 mollitia maxime aperiam delectus perspiciatis ipsam.
             </text-block>
-        </div>
+            <div v-for="number in 1000" :key="number" class="mb-4">
+                <img class="max-w-96 rounded-xl " :src="generateRandomImageUrl()" loading="lazy" alt="" />
+            </div>
 
         </div>
 
