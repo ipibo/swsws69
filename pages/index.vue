@@ -20,6 +20,8 @@ useHead({
 const currentSection = ref("home")
 const currentBgColor = ref("bg-primaryBlue")
 
+const accessibility = ref(false)
+
 const updateBgColor = () => {
   const exhibitionsSection = document.getElementById("exhibitions")
   const eventsSection = document.getElementById("events")
@@ -48,30 +50,62 @@ onBeforeUnmount(() => {
   window.removeEventListener("scroll", updateBgColor)
 })
 </script>
-<style></style>
 
 <template>
   <div
     class="font-sans text-lg transition ease-in-out duration-1000"
     :class="currentBgColor"
   >
+    <div
+      class="fixed bottom-0 left-0 text-8xl ml-4 mb-8 cursor-pointer"
+      @click="accessibility = !accessibility"
+      :class="{ 'text-white': accessibility }"
+    >
+      􁹣
+    </div>
+
     <div class="min-h-screen">
       <h1 class="font-ThreeSix21Pro text-9xl text-secondaryBlue">SWSWS69</h1>
 
-      <div
-        class="text-secondaryBlue font-light h-screen text-5xl mx-auto mx-32 mt-10"
-      >
+      <div class="flex flex-col lg:flex-row">
         <div
-          class="inline bg-secondaryBlue rounded-full text-primaryBlue pl-2 -ml-2 mr-2"
+          class="text-secondaryBlue font-light mx-auto mt-10 text-xl ml-14 md:text-3xl md:mx-24 lg:w-1/2"
         >
-          Shared Workspace Weerdjesstraat 69
+          <div
+            class="inline bg-secondaryBlue rounded-full text-primaryBlue pl-2 -ml-2 mr-2"
+          >
+            Shared Workspace Weerdjesstraat 69
+          </div>
+          is the co-working space of Erik de Geus, Eva van Boxtel, Guido van der
+          Kooij, Ibo Ibelings, Jelle Reith, Katrijn Westland, Sjef van Beers,
+          Sjoerd Mol & Tess Havas.
         </div>
-        is the co-working space of Erik de Geus, Eva van Boxtel, Guido van der
-        Kooij, Ibo Ibelings, Jelle Reith, Katrijn Westland, Sjef van Beers,
-        Sjoerd Mol & Tess Havas.
+
+        <div>
+          <div class="w-3/4 rounded-xl ml-auto bg-primaryRed mb-10 mx-4">
+            <img
+              class="rounded-t-xl"
+              src="https://picsum.photos/seed/picsum/2000/1000"
+              alt=""
+            />
+            <div class="font-ThreeSix21Pro text-6xl text-secondaryRed">
+              Exhibitions
+            </div>
+          </div>
+
+          <div class="w-3/4 rounded-xl ml-auto bg-primaryGreen mb-10 mx-4">
+            <img
+              class="rounded-t-xl"
+              src="https://picsum.photos/seed/picsum/2000/1000"
+              alt=""
+            />
+            <div class="font-ThreeSix21Pro text-6xl text-secondaryGreen">
+              Events
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <eyes class="" />
 
     <div id="exhibitions" class="min-h-screen">
       <Exhibitions />
