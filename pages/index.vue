@@ -23,10 +23,39 @@ const generateRandomImageUrl = (width = 2500, height = 2000) => {
 };
 
 generateRandomImageUrl();
+
+const currentSection = ref("home");
+const currentBgColor = ref("bg-primaryBlue");
+
+const updateBgColor = () => {
+    const exhibitionsSection = document.getElementById("exhibitions");
+    const eventsSection = document.getElementById("events");
+    console.log(exhibitionsSection.offsetTop, eventsSection.offsetTop)
+
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+    if(scrollTop >= exhibitionsSection.offsetTop -300 && scrollTop < eventsSection.offsetTop){
+      currentBgColor.value = "bg-primaryRed";
+    }else if(eventsSection && scrollTop >= eventsSection.offsetTop ){
+      currentBgColor.value = "bg-primaryGreen";
+    }
+    else{
+      currentBgColor.value = "bg-primaryBlue";
+    }
+};
+
+onMounted(() => {
+    console.log("mounted");
+    window.addEventListener("scroll", updateBgColor);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", updateBgColor);
+});
 </script>
 
 <template>
-    <div class="font-customFont text-lg bg-primaryGreen">
+    <div class="font-customFont text-lg transition ease-in-out duration-1000 " :class="currentBgColor">
         <div class="min-h-screen">
             <h1 class="font-ThreeSix21Pro text-9xl text-secondaryBlue">
                 SWSWS69
@@ -40,7 +69,7 @@ generateRandomImageUrl();
             </div>
         </div>
 
-        <div class="min-h-screen">
+        <div id="exhibitions" class="min-h-screen">
             <h1 class="text-8xl mt-9 font-ThreeSix21Pro text-secondaryRed">
                 Exhibitionsssssss......
             </h1>
@@ -53,7 +82,9 @@ generateRandomImageUrl();
             </text-block>
         </div>
 
-        <div class="min-h-screen">
+        </div>
+
+        <div id="events" class="min-h-screen">
             <h1 class="text-8xl mt-9 font-ThreeSix21Pro text-secondaryGreen">
                 Eventsssssss......
             </h1>
