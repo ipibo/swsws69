@@ -1,6 +1,6 @@
 <template>
-    <div class="app flex flex-col bg-secondaryGrey min-h-screen  ">
-        <Header />
+    <div class="app flex flex-col bg-secondaryGrey min-h-screen">
+        <!-- <Header /> -->
         <div class=" ">
             <slot />
         </div>
@@ -16,7 +16,4 @@
 }
 </style>
 
-<script setup lang="ts">
-
-
-</script>
+<script setup lang="ts"></script>

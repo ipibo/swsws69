@@ -12,12 +12,14 @@ defineProps(
     ]),
 );
 
-import headerSvg from '@/assets/svg/header.svg';
-
+import headerSvg from "@/assets/svg/headerBlue.svg";
 </script>
 
 <template>
-    <section :data-slice-type="slice.slice_type" :data-slice-variation="slice.variation">
+    <section
+        :data-slice-type="slice.slice_type"
+        :data-slice-variation="slice.variation"
+    >
         <img :src="headerSvg" alt="Header Logo" />
     </section>
 </template>
