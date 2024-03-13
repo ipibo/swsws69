@@ -1,8 +1,6 @@
 <template>
   <div>
-    <h1 class="text-8xl mt-9 font-ThreeSix21Pro text-secondaryGreen">
-      Eventsssssss......
-    </h1>
+    <h1 class="text-8xl mt-9 font-ThreeSix21Pro text-secondaryGreen">Events</h1>
 
     <text-block class="bg-primaryGrey text-secondaryGrey float-left">
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi a

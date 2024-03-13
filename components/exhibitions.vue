@@ -1,11 +1,11 @@
 <template>
   <div>
     <h1 class="text-8xl mt-9 font-ThreeSix21Pro text-secondaryRed">
-      Exhibitionsssssss......
+      Exhibitions
     </h1>
 
     <div class="w-3/4 rounded-xl ml-auto bg-secondaryRed mb-10 mx-4">
-      <img class="rounded-xl" :src="listWithRandomImageUrl[0]" />
+      <img class="rounded-t-xl" :src="listWithRandomImageUrl[0]" />
       <div class="p-4 text-primaryRed">
         <div class="font-bold">name of the ex</div>
         <div class="font-bold">artist their name</div>
@@ -45,7 +45,7 @@
 </template>
 
 <script setup>
-const generateRandomImageUrl = (width = 2500, height = 2000) => {
+const generateRandomImageUrl = (width = 3000, height = 2000) => {
   const randomString = Math.random().toString(36).substring(2, 12)
   return `https://picsum.photos/seed/${randomString}/${width}/${height}`
 }
