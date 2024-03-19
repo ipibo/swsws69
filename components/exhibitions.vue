@@ -1,44 +1,32 @@
 <template>
-  <div>
-    <h1 class="text-8xl mt-9 font-ThreeSix21Pro" :class="textColor">
+  <div class="grid grid-cols-3">
+    <h1 class="text-8xl mt-9 font-ThreeSix21Pro col-span-3" :class="textColor">
       Exhibitions
     </h1>
 
-    <div
-      class="w-3/4 rounded-xl ml-auto mb-10 mx-4 border-2"
-      :class="borderColor"
-    >
-      <div class="p-4" :class="textColor">
-        <div class="font-bold">name of the ex</div>
-        <div class="font-bold">artist their name</div>
-        <div class="font-bold">
-          {{ new Date().toLocaleDateString().replace(/\//g, ".") }} -
-          {{ new Date().toLocaleDateString().replace(/\//g, ".") }}
-        </div>
-      </div>
-      <img class="" :src="listWithRandomImageUrl[0]" />
-      <div class="p-4" :class="textColor">
-        <div class="mt-4 font-light mb-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. At placeat
-          voluptatem in dolorem eius esse, itaque ad eum labore nisi
-          exercitationem, provident excepturi aut ut autem ducimus eligendi
-          inventore laudantium?
-        </div>
-      </div>
-    </div>
+    <blocksExhibition
+      :borderColor="borderColor"
+      :textColor="textColor"
+      exhibitionName="BattleBits"
+      artistName="Ibo Ibelings"
+      startDate="01.01.2022"
+      endDate="01.01.2022"
+      image="https://picsum.photos/seed/picsum/2000/1000"
+      description="Lorem ipsum dolor sit amet consectetur adipisicing elit. At placeat voluptatem in dolorem eius esse, itaque ad eum labore nisi exercitationem, provident excepturi aut ut autem ducimus eligendi inventore laudantium?"
+    ></blocksExhibition>
 
-    <div v-for="number in numberOfImages" :key="number" class="mb-10 mx-4">
+    <!-- <div v-for="number in numberOfImages" :key="number" class="mb-10 mx-4">
       <img
         v-if="number % 2 === 0"
-        class="w-3/4 rounded-xl ml-auto"
+        class="col-span-2 rounded-xl"
         :src="listWithRandomImageUrl[number]"
       />
       <img
         v-else-if="number % 2 !== 0"
-        class="w-3/4 rounded-xl"
+        class="col-span-2 rounded-xl"
         :src="listWithRandomImageUrl[number]"
       />
-    </div>
+    </div> -->
   </div>
 </template>
 
