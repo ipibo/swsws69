@@ -17,33 +17,35 @@ useHead({
   ],
 })
 
-const currentSection = ref("home")
 const currentBgColor = ref("bg-primaryBlue")
 
 const accessibility = ref(false)
 
-const updateBgColor = () => {
-  const exhibitionsSection = document.getElementById("exhibitions")
-  const eventsSection = document.getElementById("events")
-  console.log(exhibitionsSection.offsetTop, eventsSection.offsetTop)
-
+const updateBgColor = (
+  exhibitionsSection: HTMLElement | null,
+  eventsSection: HTMLElement | null
+) => {
   const scrollTop = window.scrollY || document.documentElement.scrollTop
 
   if (
-    scrollTop >= exhibitionsSection.offsetTop - 300 &&
-    scrollTop < eventsSection.offsetTop
+    scrollTop >= (exhibitionsSection?.offsetTop ?? 0) - 300 &&
+    scrollTop < (eventsSection?.offsetTop ?? 0)
   ) {
-    currentBgColor.value = "bg-primaryRed"
+    return "bg-primaryRed"
   } else if (eventsSection && scrollTop >= eventsSection.offsetTop) {
-    currentBgColor.value = "bg-primaryGreen"
+    return "bg-primaryGreen"
   } else {
-    currentBgColor.value = "bg-primaryBlue"
+    return "bg-primaryBlue"
   }
 }
 
 onMounted(() => {
   console.log("mounted")
-  window.addEventListener("scroll", updateBgColor)
+  const exhibitionsSection = document.getElementById("exhibitions")
+  const eventsSection = document.getElementById("events")
+  window.addEventListener("scroll", () => {
+    currentBgColor.value = updateBgColor(exhibitionsSection, eventsSection)
+  })
 })
 
 onBeforeUnmount(() => {
