@@ -1,8 +1,6 @@
 <template>
   <div>
-    <h1 class="text-8xl mt-9 font-ThreeSix21Pro text-secondaryRed">
-      Exhibitions
-    </h1>
+    <h1 class="text-8xl mt-9 font-ThreeSix21Pro">Exhibitions</h1>
 
     <div class="w-3/4 rounded-xl ml-auto bg-secondaryRed mb-10 mx-4">
       <img class="rounded-t-xl" :src="listWithRandomImageUrl[0]" />
@@ -50,7 +48,7 @@ const generateRandomImageUrl = (width = 3000, height = 2000) => {
   return `https://picsum.photos/seed/${randomString}/${width}/${height}`
 }
 
-const numberOfImages = 20
+const numberOfImages = 5
 const listWithRandomImageUrl = Array.from({ length: numberOfImages }, () =>
   generateRandomImageUrl()
 )

@@ -7,6 +7,12 @@ const { data: page } = useAsyncData(`[page-uid-${route.params.uid}]`, () =>
   prismic.client.getByUID("page", "home")
 )
 
+const currentBgColor = ref("Blue")
+const accessibility = ref(false)
+
+const backgroundColor = ref("")
+const foregroundColor = ref("text-secondaryBlue")
+
 useHead({
   title: "SWSWS69",
   meta: [
@@ -16,10 +22,6 @@ useHead({
     },
   ],
 })
-
-const currentBgColor = ref("bg-primaryBlue")
-
-const accessibility = ref(false)
 
 onMounted(() => {
   console.log("mounted")
@@ -33,21 +35,20 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener("scroll", updateBgColor)
 })
+
+watchEffect(() => {
+  backgroundColor.value = `bg-primary${currentBgColor.value}`
+  foregroundColor.value = `text-secondary${currentBgColor.value}`
+})
 </script>
 
 <template>
-  <div class="transition ease-in duration-300" :class="currentBgColor">
+  <div class="transition ease-in duration-300" :class="backgroundColor">
     <div class="font-customFont text-lg max-w-[1200px] mx-auto">
-      <div
-        class="fixed bottom-0 left-0 text-8xl ml-4 mb-8 cursor-pointer"
-        @click="accessibility = !accessibility"
-        :class="{ 'text-white': accessibility }"
-      >
-        􁹣
-      </div>
-
       <div class="min-h-screen">
-        <h1 class="font-ThreeSix21Pro text-9xl text-secondaryBlue">SWSWS69</h1>
+        <h1 class="font-ThreeSix21Pro text-9xl" :class="foregroundColor">
+          SWSWS69
+        </h1>
 
         <Button class="bg-primaryRed text-secondaryRed 5xl">
           Now on display</Button
@@ -106,23 +107,26 @@ onBeforeUnmount(() => {
       </div>
 
       <div id="exhibitions" class="min-h-screen">
-        <Exhibitions />
+        <Exhibitions
+          class="transition ease-in duration-300"
+          :class="foregroundColor"
+        />
       </div>
 
       <div id="events" class="min-h-screen">
-        <events />
+        <events :class="foregroundColor" />
       </div>
-
-      <!-- <image-block iamge="teestimg.jpg" /> -->
-
-      <!-- <div class="grid grid-cols-3 gap-4">
-            <div v-for="number in 1000" :key="number" class="mb-4">
-                <img :src="generateRandomImageUrl()" loading="lazy" alt="" />
-            </div>
-        </div> -->
 
       <!-- <SliceZone class="grid md:grid-cols-2 grid-cols-1" wrapper="main" :slices="page?.data.slices ?? []"
         :components="components" /> -->
+
+      <div
+        class="fixed bottom-0 left-0 text-8xl ml-4 mb-8 cursor-pointer"
+        @click="accessibility = !accessibility"
+        :class="{ 'text-white': accessibility }"
+      >
+        􁹣
+      </div>
     </div>
   </div>
 </template>
