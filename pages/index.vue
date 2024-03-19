@@ -45,6 +45,7 @@ watchEffect(() => {
 <template>
   <div class="transition ease-in duration-300" :class="backgroundColor">
     <div class="font-customFont text-lg max-w-[1200px] mx-auto">
+      <!-- landingspagina -->
       <div class="min-h-screen">
         <h1 class="font-ThreeSix21Pro text-9xl" :class="foregroundColor">
           SWSWS69
@@ -106,17 +107,15 @@ watchEffect(() => {
         </div>
       </div>
 
-      <div id="exhibitions" class="min-h-screen">
-        <Exhibitions
-          class="transition ease-in duration-300"
-          :class="foregroundColor"
-        />
-      </div>
+      <!-- <div class="min-h-screen"> -->
+      <Exhibitions
+        id="exhibitions"
+        class="transition ease-in duration-300 min-h-screen"
+        :currentColor="currentBgColor"
+      />
+      <!-- </div> -->
 
-      <div id="events" class="min-h-screen">
-        <events :class="foregroundColor" />
-      </div>
-
+      <Events id="events" class="min-h-screen" :class="foregroundColor" />
       <!-- <SliceZone class="grid md:grid-cols-2 grid-cols-1" wrapper="main" :slices="page?.data.slices ?? []"
         :components="components" /> -->
 
