@@ -43,8 +43,13 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="transition ease-in duration-300" :class="backgroundColor">
-    <div class="font-customFont text-lg max-w-[1200px] mx-auto">
+  <div
+    class="transition ease-in duration-300 p-[32px]"
+    :class="backgroundColor"
+  >
+    <div class="font-customFont text-lg mx-auto">
+      <!-- <testPage></testPage> -->
+
       <!-- landingspagina -->
       <div class="min-h-screen">
         <h1 class="font-ThreeSix21Pro text-9xl" :class="foregroundColor">
@@ -60,8 +65,6 @@ watchEffect(() => {
         <Button class="bg-primaryBlue text-secondaryBlue"
           >Now on display</Button
         >
-
-        <div class="block h-96"></div>
 
         <div class="flex flex-col-reverse lg:flex-row">
           <div
