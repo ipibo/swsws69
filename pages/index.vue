@@ -110,13 +110,11 @@ watchEffect(() => {
         </div>
       </div>
 
-      <!-- <div class="min-h-screen"> -->
       <Exhibitions
         id="exhibitions"
         class="transition ease-in duration-300 min-h-screen"
         :currentColor="currentBgColor"
       />
-      <!-- </div> -->
 
       <Events id="events" class="min-h-screen" :class="foregroundColor" />
       <!-- <SliceZone class="grid md:grid-cols-2 grid-cols-1" wrapper="main" :slices="page?.data.slices ?? []"
