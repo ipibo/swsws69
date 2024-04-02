@@ -15,6 +15,11 @@ textColor.value = `text-secondary${props.currentColor}`
     <div class="title">
       <h1 class="font-ThreeSix21Pro text-9xl" :class="textColor">SWSWS69</h1>
     </div>
+    <div>
+      Shared Workspace Weerdjesstraat 69 is the co-working space of Erik de
+      Geus, Eva van Boxtel, Guido van der Kooij, Ibo Ibelings, Jelle Reith,
+      Katrijn Westland, Sjef van Beers, Sjoerd Mol & Tess Havas.
+    </div>
   </div>
 </template>
 
