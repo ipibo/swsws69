@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed text-2xl">
+  <div class="fixed text-2xl top-[1px]">
     <Button
       class="bg-primaryRed cursor-pointer text-secondaryRed border-secondaryRed border-[1px]"
     >
