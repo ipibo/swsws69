@@ -17,9 +17,12 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxtjs/prismic", "@nuxt/image"],
+  modules: ["@nuxtjs/prismic", "@nuxt/image", "@pinia/nuxt"],
 
   prismic: {
     endpoint: "swsws69",
   },
-});
+  imports: {
+    dirs: ["stores"],
+  },
+})

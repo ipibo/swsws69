@@ -8,10 +8,10 @@ export const updateBgColor = (
     scrollTop >= (exhibitionsSection?.offsetTop ?? 0) - 300 &&
     scrollTop < (eventsSection?.offsetTop ?? 0)
   ) {
-    return "Red"
+    return "red"
   } else if (eventsSection && scrollTop >= eventsSection.offsetTop) {
-    return "Green"
+    return "green"
   } else {
-    return "Blue"
+    return "blue"
   }
 }

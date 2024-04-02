@@ -11,8 +11,6 @@
 
       <blocksExhibition
         class="transition ease-in duration-300 col-start-1 col-span-3"
-        :borderColor="borderColor"
-        :textColor="textColor"
         exhibitionName="BattleBits"
         artistName="Ibo Ibelings"
         startDate="01.01.2022"
@@ -23,8 +21,6 @@
 
       <blocksExhibition
         class="transition ease-in duration-300 col-start-4 col-span-3"
-        :borderColor="borderColor"
-        :textColor="textColor"
         exhibitionName="BattleBits"
         artistName="Ibo Ibelings"
         startDate="01.01.2022"
@@ -50,26 +46,26 @@
 </template>
 
 <script setup>
-const props = defineProps({
-  currentColor: String,
-})
+// const props = defineProps({
+//   currentColor: String,
+// })
 
-const textColor = ref()
-const borderColor = ref()
+// const textColor = ref()
+// const borderColor = ref()
 
-borderColor.value = `border-secondary${props.currentColor}`
-textColor.value = `text-secondary${props.currentColor}`
+// borderColor.value = `border-secondary${props.currentColor}`
+// textColor.value = `text-secondary${props.currentColor}`
 
-watch(
-  () => props.currentColor,
-  (newColor) => {
-    // Code to execute when currentColor changes
-    borderColor.value = `border-secondary${newColor}`
-    textColor.value = `text-secondary${newColor}`
+// watch(
+//   () => props.currentColor,
+//   (newColor) => {
+//     // Code to execute when currentColor changes
+//     borderColor.value = `border-secondary${newColor}`
+//     textColor.value = `text-secondary${newColor}`
 
-    console.log("borderColor", borderColor.value)
-  }
-)
+//     console.log("borderColor", borderColor.value)
+//   }
+// )
 
 const generateRandomImageUrl = (width = 3000, height = 2000) => {
   const randomString = Math.random().toString(36).substring(2, 12)

@@ -17,6 +17,11 @@
     </Button>
   </div>
 </template>
-<script setup></script>
+<script setup>
+import { storeToRefs } from "pinia"
+
+const colorStore = useColorStore()
+const { color } = storeToRefs(colorStore)
+</script>
 
 <style></style>

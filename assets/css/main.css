@@ -15,3 +15,13 @@
 html {
   scroll-behavior: smooth;
 }
+
+.red {
+  fill: #ff6200;
+}
+.green {
+  fill: #00d118;
+}
+.blue {
+  fill: #0000ff;
+}
