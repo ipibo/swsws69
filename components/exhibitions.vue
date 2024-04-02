@@ -1,37 +1,39 @@
 <template>
-  <div class="flex flex-col grid grid-cols-6">
-    <h1
+  <div>
+    <titlesExhibitions />
+    <div class="flex flex-col grid grid-cols-6">
+      <!-- <h1
       class="text-[400px] transition ease-in duration-300 mt-9 font-ThreeSix21Pro col-span-3"
       :class="textColor"
     >
       Exhibitions
-    </h1>
+    </h1> -->
 
-    <blocksExhibition
-      class="transition ease-in duration-300 col-start-1 col-span-3"
-      :borderColor="borderColor"
-      :textColor="textColor"
-      exhibitionName="BattleBits"
-      artistName="Ibo Ibelings"
-      startDate="01.01.2022"
-      endDate="01.01.2022"
-      image="https://picsum.photos/seed/picsum/720/1080"
-      description="Lorem ipsum dolor sit amet consectetur adipisicing elit. At placeat voluptatem in dolorem eius esse, itaque ad eum labore nisi exercitationem, provident excepturi aut ut autem ducimus eligendi inventore laudantium?"
-    ></blocksExhibition>
+      <blocksExhibition
+        class="transition ease-in duration-300 col-start-1 col-span-3"
+        :borderColor="borderColor"
+        :textColor="textColor"
+        exhibitionName="BattleBits"
+        artistName="Ibo Ibelings"
+        startDate="01.01.2022"
+        endDate="01.01.2022"
+        image="https://picsum.photos/seed/picsum/720/1080"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. At placeat voluptatem in dolorem eius esse, itaque ad eum labore nisi exercitationem, provident excepturi aut ut autem ducimus eligendi inventore laudantium?"
+      ></blocksExhibition>
 
-    <blocksExhibition
-      class="transition ease-in duration-300 col-start-4 col-span-3"
-      :borderColor="borderColor"
-      :textColor="textColor"
-      exhibitionName="BattleBits"
-      artistName="Ibo Ibelings"
-      startDate="01.01.2022"
-      endDate="01.01.2022"
-      image="https://picsum.photos/seed/picsum/2000/1000"
-      description="Lorem ipsum dolor sit amet consectetur adipisicing elit. At placeat voluptatem in dolorem eius esse, itaque ad eum labore nisi exercitationem, provident excepturi aut ut autem ducimus eligendi inventore laudantium?"
-    ></blocksExhibition>
+      <blocksExhibition
+        class="transition ease-in duration-300 col-start-4 col-span-3"
+        :borderColor="borderColor"
+        :textColor="textColor"
+        exhibitionName="BattleBits"
+        artistName="Ibo Ibelings"
+        startDate="01.01.2022"
+        endDate="01.01.2022"
+        image="https://picsum.photos/seed/picsum/2000/1000"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. At placeat voluptatem in dolorem eius esse, itaque ad eum labore nisi exercitationem, provident excepturi aut ut autem ducimus eligendi inventore laudantium?"
+      ></blocksExhibition>
 
-    <!-- <div v-for="number in numberOfImages" :key="number" class="mb-10 mx-4">
+      <!-- <div v-for="number in numberOfImages" :key="number" class="mb-10 mx-4">
       <img
         v-if="number % 2 === 0"
         class="col-span-2 rounded-xl"
@@ -43,6 +45,7 @@
         :src="listWithRandomImageUrl[number]"
       />
     </div> -->
+    </div>
   </div>
 </template>
 

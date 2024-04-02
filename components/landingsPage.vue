@@ -1,3 +1,18 @@
+<template>
+  <div>
+    <titlesSwsws69 />
+    <div class="min-h-screen">
+      <!-- <div class="title">
+      <h1 class="font-ThreeSix21Pro text-9xl" :class="textColor">SWSWS69</h1>
+    </div> -->
+      <div>
+        Shared Workspace Weerdjesstraat 69 is the co-working space of Erik de
+        Geus, Eva van Boxtel, Guido van der Kooij, Ibo Ibelings, Jelle Reith,
+        Katrijn Westland, Sjef van Beers, Sjoerd Mol & Tess Havas.
+      </div>
+    </div>
+  </div>
+</template>
 <script setup>
 const props = defineProps({
   currentColor: String,
@@ -7,21 +22,8 @@ const textColor = ref()
 const borderColor = ref()
 
 borderColor.value = `border-secondary${props.currentColor}`
-
 textColor.value = `text-secondary${props.currentColor}`
 </script>
-<template>
-  <div class="min-h-screen">
-    <div class="title">
-      <h1 class="font-ThreeSix21Pro text-9xl" :class="textColor">SWSWS69</h1>
-    </div>
-    <div>
-      Shared Workspace Weerdjesstraat 69 is the co-working space of Erik de
-      Geus, Eva van Boxtel, Guido van der Kooij, Ibo Ibelings, Jelle Reith,
-      Katrijn Westland, Sjef van Beers, Sjoerd Mol & Tess Havas.
-    </div>
-  </div>
-</template>
 
 <!--      <div class="min-h-screen">
   
