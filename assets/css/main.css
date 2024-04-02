@@ -8,6 +8,10 @@
 }
 
 @font-face {
-    font-family: "ThreeSix21Pro";
-    src: url("../fonts/ThreeSix21Pro.woff") format("woff");
+  font-family: "ThreeSix21Pro";
+  src: url("../fonts/ThreeSix21Pro.woff") format("woff");
+}
+
+html {
+  scroll-behavior: smooth;
 }
