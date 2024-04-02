@@ -1,9 +1,9 @@
 <template>
   <div
-    class="rounded-[40px] border-[2px] col-span-2 text-[36px] leading-[40px]"
+    class="transition ease-in duration-300 rounded-[40px] border-[2px] text-[36px] leading-[40px]"
     :class="borderColor"
   >
-    <div class="p-[40px]" :class="textColor">
+    <div class="p-[40px] transition ease-in duration-300" :class="textColor">
       <div class="font-bold">{{ exhibitionName }}</div>
       <div class="font-bold">{{ artistName }}</div>
       <div class="font-bold">
@@ -11,7 +11,7 @@
         {{ new Date().toLocaleDateString().replace(/\//g, ".") }}
       </div>
     </div>
-    <img class="" :src="image" />
+    <img class="w-full" :src="image" />
     <div class="p-4" :class="textColor">
       <div class="mt-4 font-light mb-2">
         {{ description }}
