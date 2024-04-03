@@ -4,6 +4,7 @@
     data-name="Layer 1"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 1919.81 297.27"
+    class="mb-10"
   >
     <path
       :class="color"

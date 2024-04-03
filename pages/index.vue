@@ -53,8 +53,6 @@ onBeforeUnmount(() => {
     class="transition ease-in duration-300 p-[32px]"
     :class="backgroundColor"
   >
-    <Menu></Menu>
-
     <div class="font-customFont text-lg mx-auto">
       <!-- landingspagina -->
       <LandingsPage id="landingsPage"></LandingsPage>

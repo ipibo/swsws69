@@ -1,18 +1,38 @@
 <template>
   <div>
-    <titlesSwsws69 :currentColor="currentColor" />
-    <div class="min-h-screen grid grid-cols-6 mt-10">
-      <div :class="textColor" class="col-span-2 text-3xl">
-        Shared Workspace Weerdjesstraat 69 is the co-working space of Erik de
-        Geus, Eva van Boxtel, Guido van der Kooij, Ibo Ibelings, Jelle Reith,
-        Katrijn Westland, Sjef van Beers, Sjoerd Mol & Tess Havas.
-      </div>
-      <div class="col-start-3 col-span-4">
-        <img
-          class="rounded-t-xl hidden md:block"
-          src="https://picsum.photos/seed/picsum/2000/1000"
-          alt=""
-        />
+    <titlesSwsws69 :currentColor="currentColor" class="mb-10" />
+    <Menu currentMenu="SWSWS69"></Menu>
+    <div class="min-h-screen mt-10">
+      <div class="grid grid-cols-6">
+        <div :class="textColor" class="col-span-2 text-3xl">
+          Shared Workspace Weerdjesstraat 69 is the co-working space of Erik de
+          Geus, Eva van Boxtel, Guido van der Kooij, Ibo Ibelings, Jelle Reith,
+          Katrijn Westland, Sjef van Beers, Sjoerd Mol & Tess Havas.
+        </div>
+        <div
+          class="col-start-3 col-span-4 rounded-xl ml-auto bg-primaryRed border-secondaryRed border-[2px]"
+        >
+          <img
+            class="rounded-t-xl hidden md:block"
+            src="https://picsum.photos/seed/picsum/2000/1000"
+            alt=""
+          />
+          <div class="font-ThreeSix21Pro text-6xl text-secondaryRed">
+            Exhibitions
+          </div>
+        </div>
+        <div
+          class="col-start-3 col-span-4 rounded-xl ml-auto bg-primaryGreen border-secondaryGreen border-[2px] mt-10 mb-10"
+        >
+          <img
+            class="rounded-t-xl hidden md:block"
+            src="https://picsum.photos/seed/picsum/2000/1000"
+            alt=""
+          />
+          <div class="font-ThreeSix21Pro text-6xl text-secondaryGreen">
+            Events
+          </div>
+        </div>
       </div>
     </div>
   </div>

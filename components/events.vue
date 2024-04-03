@@ -1,6 +1,7 @@
 <template>
   <div>
-    <titlesEvents />
+    <titlesEvents class="mb-10" />
+    <Menu currentMenu="events" class="mb-10"></Menu>
     <div>
       <!-- <h1 class="text-8xl mt-9 font-ThreeSix21Pro">Events</h1> -->
 
