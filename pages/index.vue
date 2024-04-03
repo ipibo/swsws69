@@ -46,10 +46,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div
-    class="transition ease-in duration-300 p-[32px]"
-    :class="backgroundColor"
-  >
+  <div class="transition ease-in duration-300" :class="backgroundColor">
     <div class="font-customFont text-lg mx-auto">
       <!-- landingspagina -->
       <LandingsPage id="landingsPage"></LandingsPage>

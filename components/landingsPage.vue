@@ -1,8 +1,8 @@
 <template>
   <div>
     <titlesSwsws69 :currentColor="currentColor" class="mb-10" />
-    <Menu currentMenu="SWSWS69"></Menu>
-    <div class="min-h-screen mt-10">
+    <Menu currentMenu="SWSWS69" class="px-[32px]"></Menu>
+    <div class="min-h-screen mt-10 px-[32px]">
       <div class="grid grid-cols-6">
         <div :class="textColor" class="col-span-2 text-3xl">
           Shared Workspace Weerdjesstraat 69 is the co-working space of Erik de
