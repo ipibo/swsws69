@@ -18,10 +18,13 @@ html {
 
 .red {
   fill: #ff6200;
+  transition: ease-in 300ms;
 }
 .green {
   fill: #00d118;
+  transition: ease-in 300ms;
 }
 .blue {
   fill: #0000ff;
+  transition: ease-in 300ms;
 }
