@@ -1,25 +1,40 @@
 <template>
   <div>
     <titlesSwsws69 :currentColor="currentColor" />
-    <div class="min-h-screen">
-      <div>
+    <div class="min-h-screen grid grid-cols-6 mt-10">
+      <div :class="textColor" class="col-span-2 text-3xl">
         Shared Workspace Weerdjesstraat 69 is the co-working space of Erik de
         Geus, Eva van Boxtel, Guido van der Kooij, Ibo Ibelings, Jelle Reith,
         Katrijn Westland, Sjef van Beers, Sjoerd Mol & Tess Havas.
+      </div>
+      <div class="col-start-3 col-span-4">
+        <img
+          class="rounded-t-xl hidden md:block"
+          src="https://picsum.photos/seed/picsum/2000/1000"
+          alt=""
+        />
       </div>
     </div>
   </div>
 </template>
 <script setup>
-const props = defineProps({
-  currentColor: String,
+import { storeToRefs } from "pinia"
+
+const colorStore = useColorStore()
+const { color } = storeToRefs(colorStore)
+const borderColor = ref(`border-secondary${firstCharUpperCase(color.value)}`)
+const textColor = ref(`text-secondary${firstCharUpperCase(color.value)}`)
+
+const changeColors = () => {
+  borderColor.value = `border-secondary${firstCharUpperCase(color.value)}`
+  textColor.value = `text-secondary${firstCharUpperCase(color.value)}`
+}
+
+watch(color, (newColor) => {
+  changeColors()
 })
 
-const textColor = ref()
-const borderColor = ref()
-
-borderColor.value = `border-secondary${props.currentColor}`
-textColor.value = `text-secondary${props.currentColor}`
+changeColors()
 </script>
 
 <!--      <div class="min-h-screen">
