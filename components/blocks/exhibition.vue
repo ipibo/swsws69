@@ -21,9 +21,25 @@
 </template>
 
 <script setup>
+import { storeToRefs } from "pinia"
+
+const colorStore = useColorStore()
+const { color } = storeToRefs(colorStore)
+const borderColor = ref(`border-secondary${firstCharUpperCase(color.value)}`)
+const textColor = ref(`text-secondary${firstCharUpperCase(color.value)}`)
+
+const changeColors = () => {
+  borderColor.value = `border-secondary${firstCharUpperCase(color.value)}`
+  textColor.value = `text-secondary${firstCharUpperCase(color.value)}`
+}
+
+watch(color, (newColor) => {
+  changeColors()
+})
+
+changeColors()
+
 const props = defineProps({
-  borderColor: String,
-  textColor: String,
   exhibitionName: String,
   artistName: String,
   startDate: String,

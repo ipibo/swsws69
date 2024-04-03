@@ -19,7 +19,7 @@
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. At placeat voluptatem in dolorem eius esse, itaque ad eum labore nisi exercitationem, provident excepturi aut ut autem ducimus eligendi inventore laudantium?"
       ></blocksExhibition>
 
-      <blocksExhibition
+      <!-- <blocksExhibition
         class="transition ease-in duration-300 col-start-4 col-span-3"
         exhibitionName="BattleBits"
         artistName="Ibo Ibelings"
@@ -27,7 +27,7 @@
         endDate="01.01.2022"
         image="https://picsum.photos/seed/picsum/2000/1000"
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. At placeat voluptatem in dolorem eius esse, itaque ad eum labore nisi exercitationem, provident excepturi aut ut autem ducimus eligendi inventore laudantium?"
-      ></blocksExhibition>
+      ></blocksExhibition> -->
 
       <!-- <div v-for="number in numberOfImages" :key="number" class="mb-10 mx-4">
       <img
@@ -46,26 +46,10 @@
 </template>
 
 <script setup>
-// const props = defineProps({
-//   currentColor: String,
-// })
+import { storeToRefs } from "pinia"
 
-// const textColor = ref()
-// const borderColor = ref()
-
-// borderColor.value = `border-secondary${props.currentColor}`
-// textColor.value = `text-secondary${props.currentColor}`
-
-// watch(
-//   () => props.currentColor,
-//   (newColor) => {
-//     // Code to execute when currentColor changes
-//     borderColor.value = `border-secondary${newColor}`
-//     textColor.value = `text-secondary${newColor}`
-
-//     console.log("borderColor", borderColor.value)
-//   }
-// )
+const colorStore = useColorStore()
+const { color } = storeToRefs(colorStore)
 
 const generateRandomImageUrl = (width = 3000, height = 2000) => {
   const randomString = Math.random().toString(36).substring(2, 12)
