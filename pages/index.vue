@@ -8,10 +8,7 @@ const { data: page } = useAsyncData(`[page-uid-${route.params.uid}]`, () =>
   prismic.client.getByUID("page", "home")
 )
 
-// const currentBgColor = ref("blue")
-
 const accessibility = ref(false)
-
 const backgroundColor = ref("")
 const foregroundColor = ref("text-secondaryBlue")
 
