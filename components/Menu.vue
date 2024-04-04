@@ -29,8 +29,6 @@ const { color } = storeToRefs(colorStore)
 const props = defineProps({
   currentMenu: String,
 })
-
-// console.log("currentmenu", props.currentMenu)
 </script>
 
 <style></style>
