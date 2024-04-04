@@ -49,14 +49,12 @@ onBeforeUnmount(() => {
   <div class="transition ease-in duration-300" :class="backgroundColor">
     <div class="font-customFont text-lg mx-auto">
       <!-- landingspagina -->
-      <LandingsPage id="landingsPage"></LandingsPage>
+      <LandingsPage class="mb-20" id="landingsPage"></LandingsPage>
 
-      <Exhibitions
-        id="exhibitions"
-        class="transition ease-in duration-300 min-h-screen"
-      />
+      <Exhibitions id="exhibitions" class="mb-20" />
 
-      <Events id="events" class="min-h-screen" :class="foregroundColor" />
+      <Events id="events" class="mb-20" />
+
       <!-- <SliceZone class="grid md:grid-cols-2 grid-cols-1" wrapper="main" :slices="page?.data.slices ?? []"
         :components="components" /> -->
     </div>
