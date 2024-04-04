@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const colorStore = useColorStore()
-const { color } = storeToRefs(colorStore)
+const { color, accessibilityMode } = storeToRefs(colorStore)
 
 const prismic = usePrismic()
 const route = useRoute()
@@ -10,7 +10,7 @@ const { data: page } = useAsyncData(`[page-uid-${route.params.uid}]`, () =>
 
 const accessibility = ref(false)
 const backgroundColor = ref("")
-const foregroundColor = ref("text-secondaryBlue")
+console.log("accessibilityMode", accessibilityMode)
 
 useHead({
   title: "SWSWS69",
@@ -40,15 +40,16 @@ onMounted(() => {
   backgroundColor.value = `bg-primary${colorFirstCharUpperCase}`
 })
 
-onBeforeUnmount(() => {
-  // window.removeEventListener("scroll", updateBgColor)
-})
+const flipAccesibility = () => {
+  accessibility.value = !accessibility.value
+
+  // accessibilityMode.value = accessibility.value
+}
 </script>
 
 <template>
   <div class="transition ease-in duration-300" :class="backgroundColor">
     <div class="font-customFont text-lg mx-auto">
-      <!-- landingspagina -->
       <LandingsPage class="mb-20" id="landingsPage"></LandingsPage>
 
       <Exhibitions id="exhibitions" class="mb-20" />
@@ -61,7 +62,7 @@ onBeforeUnmount(() => {
 
     <div
       class="fixed bottom-[32px] left-[32px] w-12 h-12 cursor-pointer z-50"
-      @click="accessibility = !accessibility"
+      @click="flipAccesibility"
     >
       <iconsAccessibility />
     </div>

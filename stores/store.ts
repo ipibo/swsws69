@@ -5,6 +5,7 @@ export const useColorStore = defineStore("colorStore", {
   state: () => {
     return {
       color: "blue",
+      accessibilityMode: false,
     }
   },
   // actions
