@@ -1,6 +1,6 @@
 <template>
   <div>
-    <titlesSwsws69 :currentColor="currentColor" class="mb-10" />
+    <titlesSwsws69 class="mb-10" />
     <!-- <Menu currentMenu="SWSWS69" class="px-[32px]"></Menu> -->
     <div class="min-h-screen mt-10 px-[32px]">
       <div class="md:grid md:grid-cols-6">
