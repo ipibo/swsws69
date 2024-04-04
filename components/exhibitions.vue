@@ -2,7 +2,7 @@
   <div>
     <titlesExhibitions />
     <Menu currentMenu="exhibitions" class="mb-10 px-[32px]"></Menu>
-    <div class="flex flex-col grid grid-cols-6 px-[32px] min-h-screen">
+    <div class="flex flex-col px-[32px] min-h-screen md:grid md:grid-cols-6">
       <!-- <h1
       class="text-[400px] transition ease-in duration-300 mt-9 font-ThreeSix21Pro col-span-3"
       :class="textColor"
@@ -11,7 +11,7 @@
     </h1> -->
 
       <blocksExhibition
-        class="transition ease-in duration-300 col-start-1 col-span-3"
+        class="transition ease-in duration-300 col-start-4 col-span-3"
         exhibitionName="BattleBits"
         artistName="Ibo Ibelings"
         startDate="01.01.2022"
