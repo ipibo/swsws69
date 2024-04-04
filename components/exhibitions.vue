@@ -2,7 +2,7 @@
   <div>
     <titlesExhibitions />
     <Menu currentMenu="exhibitions" class="mb-10 px-[32px]"></Menu>
-    <div class="flex flex-col grid grid-cols-6 px-[32px]">
+    <div class="flex flex-col grid grid-cols-6 px-[32px] min-h-screen">
       <!-- <h1
       class="text-[400px] transition ease-in duration-300 mt-9 font-ThreeSix21Pro col-span-3"
       :class="textColor"
