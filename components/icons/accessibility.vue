@@ -1,20 +1,17 @@
 <template>
-  <div>
+  <div @click="flipColor">
     <img class="" :src="importedSvg" alt="Imported SVG" />
   </div>
 </template>
 
-<script>
+<script setup>
 import MySvg from "./assets/svg/accessibility.svg"
-console.log(MySvg)
 
-export default {
-  name: "SvgComponent",
-  data() {
-    return {
-      importedSvg: MySvg,
-    }
-  },
+const importedSvg = MySvg
+
+function flipColor() {
+  // Add your logic here
+  console.log("flipColor")
 }
 </script>
 
