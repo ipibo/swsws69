@@ -1,5 +1,5 @@
 <template>
-  <div class="text-2xl gap-3 flex">
+  <div class="text-4xl gap-3 flex">
     <Button
       v-if="currentMenu !== 'SWSWS69'"
       class="bg-primaryBlue cursor-pointer text-secondaryBlue border-secondaryBlue border-[1px]"
@@ -30,7 +30,7 @@ const props = defineProps({
   currentMenu: String,
 })
 
-console.log("currentmenu", props.currentMenu)
+// console.log("currentmenu", props.currentMenu)
 </script>
 
 <style></style>
