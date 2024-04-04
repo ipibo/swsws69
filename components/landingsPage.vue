@@ -34,31 +34,6 @@
             <div class="">Events</div>
           </a>
         </div>
-
-        <!-- <div
-          class="col-start-3 col-span-4 rounded-xl ml-auto bg-primaryRed border-secondaryRed border-[2px]"
-        >
-          <img
-            class="rounded-t-xl hidden md:block"
-            src="https://picsum.photos/seed/picsum/2000/1000"
-            alt=""
-          />
-          <div class="font-ThreeSix21Pro text-6xl text-secondaryRed">
-            Exhibitions
-          </div>
-        </div> -->
-        <!-- <div
-          class="col-start-3 col-span-4 rounded-xl ml-auto bg-primaryGreen border-secondaryGreen border-[2px] mt-10 mb-10"
-        >
-          <img
-            class="rounded-t-xl hidden md:block"
-            src="https://picsum.photos/seed/picsum/2000/1000"
-            alt=""
-          />
-          <div class="font-ThreeSix21Pro text-6xl text-secondaryGreen">
-            Events
-          </div>
-        </div> -->
       </div>
     </div>
   </div>
