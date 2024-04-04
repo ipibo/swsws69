@@ -40,7 +40,5 @@
 const colorStore = useColorStore()
 const { color } = storeToRefs(colorStore)
 const col = ref(color.value.toLowerCase())
-
-console.log("color", color.value)
 </script>
 <style></style>
