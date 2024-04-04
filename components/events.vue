@@ -2,7 +2,7 @@
   <div>
     <titlesEvents class="mb-10" />
     <Menu currentMenu="events" class="mb-10 px-[32px]"></Menu>
-    <div class="px-[32px]">
+    <div class="min-h-screen px-[32px]">
       <!-- <h1 class="text-8xl mt-9 font-ThreeSix21Pro">Events</h1> -->
 
       <text-block class="float-left" :class="textColor">
