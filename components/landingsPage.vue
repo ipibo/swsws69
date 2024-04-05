@@ -1,7 +1,7 @@
 <template>
   <div>
     <titlesSwsws69 class="mb-10" />
-    <!-- <Menu currentMenu="SWSWS69" class="px-[32px]"></Menu> -->
+    <Menu currentMenu="SWSWS69" class="px-[32px] md:hidden"></Menu>
     <div class="min-h-screen mt-10 px-[32px]">
       <div class="md:grid md:grid-cols-6">
         <div :class="textColor" class="col-span-2 text-3xl">
@@ -10,7 +10,9 @@
           Katrijn Westland, Sjef van Beers, Sjoerd Mol & Tess Havas.
         </div>
 
-        <div class="col-start-3 col-span-4 ml-auto flex flex-col gap-2">
+        <div
+          class="hidden md:flex col-start-3 col-span-4 ml-auto flex flex-col gap-2"
+        >
           <a
             href="#exhibitions"
             class="font-ThreeSix21Pro text-6xl text-secondaryRed rounded-xl bg-primaryRed border-secondaryRed border-[2px] cursor-pointer"
@@ -24,7 +26,7 @@
           </a>
           <a
             href="#events"
-            class="font-ThreeSix21Pro text-6xl text-secondaryRed rounded-xl bg-primaryGreen border-secondaryGreen border-[2px] cursor-pointer"
+            class="font-ThreeSix21Pro text-6xl text-secondaryGreen rounded-xl bg-primaryGreen border-secondaryGreen border-[2px] cursor-pointer"
           >
             <img
               class="rounded-t-xl hidden md:block"
