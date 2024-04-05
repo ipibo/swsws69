@@ -1,22 +1,22 @@
 <template>
-  <div class="text-4xl gap-3 flex">
+  <div class="text-4xl gap-3 flex font-ThreeSix21Pro">
     <Button
       v-if="currentMenu !== 'SWSWS69'"
-      class="bg-primaryBlue cursor-pointer text-secondaryBlue border-secondaryBlue border-[1px]"
+      class="bg-primaryBlue cursor-pointer text-secondaryBlue px-4"
       :class="classObject"
     >
       <a href="#"> SWSWS69 </a>
     </Button>
     <Button
       v-if="currentMenu !== 'exhibitions'"
-      class="bg-primaryRed cursor-pointer text-secondaryRed border-secondaryRed border-[1px]"
+      class="bg-primaryRed cursor-pointer text-secondaryRed px-4"
       :class="classObject"
     >
       <a href="#exhibitions"> Exhibitions </a>
     </Button>
     <Button
       v-if="currentMenu !== 'events'"
-      class="bg-primaryGreen cursor-pointer text-secondaryGreen border-secondaryGreen border-[1px]"
+      class="bg-primaryGreen cursor-pointer text-secondaryGreen px-4"
       :class="classObject"
     >
       <a href="#events"> Events </a>
