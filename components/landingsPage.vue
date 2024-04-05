@@ -3,15 +3,22 @@
     <titlesSwsws69 class="mb-10" />
     <Menu currentMenu="SWSWS69" class="px-[32px] md:hidden"></Menu>
     <div class="min-h-screen mt-10 px-[32px]">
-      <div class="md:grid md:grid-cols-6">
-        <div :class="textColor" class="col-span-2 text-3xl">
-          Shared Workspace Weerdjesstraat 69 is the co-working space of Erik de
-          Geus, Eva van Boxtel, Guido van der Kooij, Ibo Ibelings, Jelle Reith,
-          Katrijn Westland, Sjef van Beers, Sjoerd Mol & Tess Havas.
+      <div class="md:grid md:grid-cols-6 gap-4">
+        <div :class="textColor" class="col-span-4 text-3xl">
+          <img
+            class="rounded-xl"
+            src="https://images.prismic.io/swsws69/c371a755-f41a-4966-be11-93d35889062f_DSC08301-verkleind.jpg?auto=format,compress"
+            alt=""
+          />
+          <div>
+            Shared Workspace Weerdjesstraat 69 is the co-working space of Erik
+            de Geus, Eva van Boxtel, Guido van der Kooij, Ibo Ibelings, Jelle
+            Reith, Katrijn Westland, Sjef van Beers, Sjoerd Mol & Tess Havas.
+          </div>
         </div>
 
         <div
-          class="hidden md:flex col-start-3 col-span-4 ml-auto flex flex-col gap-2"
+          class="hidden md:flex col-start-5 col-span-2 ml-auto flex flex-col gap-2"
         >
           <a
             href="#exhibitions"
@@ -19,7 +26,7 @@
           >
             <img
               class="rounded-t-xl hidden md:block"
-              src="https://picsum.photos/seed/picsum/2000/1000"
+              src="https://images.prismic.io/swsws69/577b430d-a414-4447-9e56-a1b666fbeefa_DSC08349-verkleind.jpg?auto=format,compress"
               alt=""
             />
             <div class="">Exhibitions</div>
@@ -30,7 +37,7 @@
           >
             <img
               class="rounded-t-xl hidden md:block"
-              src="https://picsum.photos/seed/picsum/2000/1000"
+              src="https://images.prismic.io/swsws69/577b430d-a414-4447-9e56-a1b666fbeefa_DSC08349-verkleind.jpg?auto=format,compress"
               alt=""
             />
             <div class="">Events</div>
