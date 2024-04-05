@@ -16,12 +16,12 @@ export default {
         primaryBlue: "#000E7D",
         primaryRed: "#820000",
         primaryGreen: "#006E02",
-        primaryGrey: "#0f0f0f",
+        primaryGrey: "#e5e5e5",
 
         secondaryBlue: "#0000FF",
         secondaryRed: "#ff6200",
         secondaryGreen: "#00d118",
-        secondaryGrey: "#e5e5e5",
+        secondaryGrey: "#0f0f0f",
       },
       fontFamily: {
         ThreeSix21Pro: ["ThreeSix21Pro", "sans-serif"],
@@ -31,4 +31,4 @@ export default {
 
     plugins: [],
   },
-};
+}

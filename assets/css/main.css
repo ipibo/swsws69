@@ -28,3 +28,7 @@ html {
   fill: #0000ff;
   transition: ease-in 300ms;
 }
+.grey {
+  fill: #0f0f0f;
+  transition: ease-in 300ms;
+}

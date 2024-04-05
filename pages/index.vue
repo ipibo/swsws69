@@ -1,3 +1,25 @@
+<template>
+  <div class="transition ease-in duration-300" :class="backgroundColor">
+    <div class="font-customFont text-lg mx-auto max-w-7xl">
+      <LandingsPage class="mb-20" id="landingsPage"></LandingsPage>
+      <Exhibitions id="exhibitions" class="mb-20" />
+      <Events id="events" class="mb-20" />
+
+      <!-- <SliceZone class="grid md:grid-cols-2 grid-cols-1" wrapper="main" :slices="page?.data.slices ?? []"
+        :components="components" /> -->
+    </div>
+
+    <div
+      class="fixed bottom-[32px] left-[32px] w-12 h-12 cursor-pointer z-50"
+      @click="flipAccesibility"
+    >
+      <iconsAccessibility
+        :class="{ rotated: accessibilityMode, notRotated: !accessibilityMode }"
+      />
+    </div>
+  </div>
+</template>
+
 <script setup lang="ts">
 const colorStore = useColorStore()
 const { color, accessibilityMode } = storeToRefs(colorStore)
@@ -52,10 +74,11 @@ onMounted(() => {
 const flipAccesibility = () => {
   accessibility.value = !accessibility.value
   accessibilityMode.value = accessibility.value
-  backgroundColor.value = `bg-white`
+  // backgroundColor.value = `bg-white`
   if (accessibilityMode.value) {
-    backgroundColor.value = `bg-white`
-    colorStore.setColor("black")
+    backgroundColor.value = `bg-primaryGrey`
+    colorStore.setColor("grey")
+    console.log("color", color.value)
   } else if (!accessibilityMode.value) {
     colorStore.setColor(
       updateBgColor(exhibitionsSection.value, eventsSection.value)
@@ -67,28 +90,6 @@ const flipAccesibility = () => {
   }
 }
 </script>
-
-<template>
-  <div class="transition ease-in duration-300" :class="backgroundColor">
-    <div class="font-customFont text-lg mx-auto max-w-7xl">
-      <LandingsPage class="mb-20" id="landingsPage"></LandingsPage>
-      <Exhibitions id="exhibitions" class="mb-20" />
-      <Events id="events" class="mb-20" />
-
-      <!-- <SliceZone class="grid md:grid-cols-2 grid-cols-1" wrapper="main" :slices="page?.data.slices ?? []"
-        :components="components" /> -->
-    </div>
-
-    <div
-      class="fixed bottom-[32px] left-[32px] w-12 h-12 cursor-pointer z-50"
-      @click="flipAccesibility"
-    >
-      <iconsAccessibility
-        :class="{ rotated: accessibilityMode, notRotated: !accessibilityMode }"
-      />
-    </div>
-  </div>
-</template>
 
 <style scoped>
 .rotated {
