@@ -3,7 +3,7 @@
     <div class="font-customFont text-lg mx-auto max-w-7xl">
       <LandingsPage class="mb-20" id="landingsPage"></LandingsPage>
       <Exhibitions id="exhibitions" class="mb-20" />
-      <Events id="events" class="mb-20" />
+      <Events id="events" />
 
       <!-- <SliceZone class="grid md:grid-cols-2 grid-cols-1" wrapper="main" :slices="page?.data.slices ?? []"
         :components="components" /> -->
