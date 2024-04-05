@@ -7,14 +7,10 @@ const route = useRoute()
 const { data: page } = useAsyncData(`[page-uid-${route.params.uid}]`, () =>
   prismic.client.getByUID("page", "home")
 )
-
 const accessibility = ref(false)
 const backgroundColor = ref("")
-
 const exhibitionsSection = ref()
 const eventsSection = ref()
-
-console.log("accessibilityMode", accessibilityMode)
 
 useHead({
   title: "SWSWS69",
@@ -76,9 +72,7 @@ const flipAccesibility = () => {
   <div class="transition ease-in duration-300" :class="backgroundColor">
     <div class="font-customFont text-lg mx-auto">
       <LandingsPage class="mb-20" id="landingsPage"></LandingsPage>
-
       <Exhibitions id="exhibitions" class="mb-20" />
-
       <Events id="events" class="mb-20" />
 
       <!-- <SliceZone class="grid md:grid-cols-2 grid-cols-1" wrapper="main" :slices="page?.data.slices ?? []"
