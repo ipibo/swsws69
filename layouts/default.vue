@@ -1,5 +1,5 @@
 <template>
-  <div class="app flex flex-col bg-primaryBlue">
+  <div class="app flex flex-col">
     <!-- <Header /> -->
     <div class=" ">
       <slot />
