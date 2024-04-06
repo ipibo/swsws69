@@ -17,6 +17,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "exhibitions": {
+              "type": "SharedSlice"
+            },
             "info_text": {
               "type": "SharedSlice"
             },

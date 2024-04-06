@@ -7,13 +7,13 @@
       <div class="font-bold">{{ exhibitionName }}</div>
       <div class="font-bold">{{ artistName }}</div>
       <div class="font-bold">
-        {{ new Date().toLocaleDateString().replace(/\//g, ".") }} -
-        {{ new Date().toLocaleDateString().replace(/\//g, ".") }}
+        {{ new Date(startDate).toLocaleDateString().replace(/\//g, ".") }} -
+        {{ new Date(endDate).toLocaleDateString().replace(/\//g, ".") }}
       </div>
     </div>
     <img class="w-full" :src="image" />
     <div class="p-4" :class="textColor">
-      <div class="mt-4 font-light mb-2">
+      <div class="mt-4 font-light mb-2 text-[24px]">
         {{ description }}
       </div>
     </div>

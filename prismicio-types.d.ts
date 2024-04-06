@@ -4,7 +4,10 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
-type PageDocumentDataSlicesSlice = InfoTextSlice | EventBlockSlice;
+type PageDocumentDataSlicesSlice =
+  | ExhibitionsSlice
+  | InfoTextSlice
+  | EventBlockSlice;
 
 /**
  * Content for Page documents
@@ -68,6 +71,21 @@ export type PageDocument<Lang extends string = string> =
 export type AllDocumentTypes = PageDocument;
 
 /**
+ * Primary content in *EventBlock → Primary*
+ */
+export interface EventBlockSliceDefaultPrimary {
+  /**
+   * test field in *EventBlock → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: event_block.primary.test
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  test: prismic.RichTextField;
+}
+
+/**
  * Primary content in *EventBlock → Items*
  */
 export interface EventBlockSliceDefaultItem {
@@ -111,7 +129,7 @@ export interface EventBlockSliceDefaultItem {
  */
 export type EventBlockSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<EventBlockSliceDefaultPrimary>,
   Simplify<EventBlockSliceDefaultItem>
 >;
 
@@ -130,6 +148,116 @@ type EventBlockSliceVariation = EventBlockSliceDefault;
 export type EventBlockSlice = prismic.SharedSlice<
   "event_block",
   EventBlockSliceVariation
+>;
+
+/**
+ * Primary content in *Exhibitions → Primary*
+ */
+export interface ExhibitionsSliceDefaultPrimary {
+  /**
+   * title field in *Exhibitions → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibitions.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * artist name field in *Exhibitions → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibitions.primary.artist_name
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  artist_name: prismic.RichTextField;
+
+  /**
+   * start date field in *Exhibitions → Primary*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibitions.primary.start_date
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  start_date: prismic.DateField;
+
+  /**
+   * end date field in *Exhibitions → Primary*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibitions.primary.end_date
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  end_date: prismic.DateField;
+
+  /**
+   * header image field in *Exhibitions → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibitions.primary.header_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  header_image: prismic.ImageField<never>;
+
+  /**
+   * description field in *Exhibitions → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibitions.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *Exhibitions → Items*
+ */
+export interface ExhibitionsSliceDefaultItem {
+  /**
+   * images field in *Exhibitions → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: exhibitions.items[].images
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  images: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Exhibitions Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ExhibitionsSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ExhibitionsSliceDefaultPrimary>,
+  Simplify<ExhibitionsSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *Exhibitions*
+ */
+type ExhibitionsSliceVariation = ExhibitionsSliceDefault;
+
+/**
+ * Exhibitions Shared Slice
+ *
+ * - **API ID**: `exhibitions`
+ * - **Description**: Exhibitions
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ExhibitionsSlice = prismic.SharedSlice<
+  "exhibitions",
+  ExhibitionsSliceVariation
 >;
 
 /**
@@ -178,6 +306,51 @@ export type InfoTextSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Default variation for TestSlice Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TestSliceSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *TestSlice*
+ */
+type TestSliceSliceVariation = TestSliceSliceDefault;
+
+/**
+ * TestSlice Shared Slice
+ *
+ * - **API ID**: `test_slice`
+ * - **Description**: TestSlice
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TestSliceSlice = prismic.SharedSlice<
+  "test_slice",
+  TestSliceSliceVariation
+>;
+
+/**
+ * Primary content in *TitleBlock → Primary*
+ */
+export interface TitleBlockSliceDefaultPrimary {
+  /**
+   * image field in *TitleBlock → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: title_block.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
  * Default variation for TitleBlock Slice
  *
  * - **API ID**: `default`
@@ -186,7 +359,7 @@ export type InfoTextSlice = prismic.SharedSlice<
  */
 export type TitleBlockSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<TitleBlockSliceDefaultPrimary>,
   never
 >;
 
@@ -222,14 +395,24 @@ declare module "@prismicio/client" {
       PageDocumentDataSlicesSlice,
       AllDocumentTypes,
       EventBlockSlice,
+      EventBlockSliceDefaultPrimary,
       EventBlockSliceDefaultItem,
       EventBlockSliceVariation,
       EventBlockSliceDefault,
+      ExhibitionsSlice,
+      ExhibitionsSliceDefaultPrimary,
+      ExhibitionsSliceDefaultItem,
+      ExhibitionsSliceVariation,
+      ExhibitionsSliceDefault,
       InfoTextSlice,
       InfoTextSliceDefaultPrimary,
       InfoTextSliceVariation,
       InfoTextSliceDefault,
+      TestSliceSlice,
+      TestSliceSliceVariation,
+      TestSliceSliceDefault,
       TitleBlockSlice,
+      TitleBlockSliceDefaultPrimary,
       TitleBlockSliceVariation,
       TitleBlockSliceDefault,
     };

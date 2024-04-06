@@ -1,5 +1,5 @@
 <template>
-  <div class="text-4xl gap-3 flex font-ThreeSix21Pro">
+  <div class="text-2xl md:text-4xl gap-3 flex font-ThreeSix21Pro">
     <Button
       v-if="currentMenu !== 'SWSWS69'"
       class="bg-primaryBlue cursor-pointer text-secondaryBlue px-4"
