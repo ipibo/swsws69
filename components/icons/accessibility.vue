@@ -37,7 +37,7 @@ const importedSvg = MySvg
 const colorStore = useColorStore()
 const { color, accessibilityMode } = storeToRefs(colorStore)
 
-console.log(color.value)
+// console.log(color.value)
 
 // function flipColor() {
 //   // Add your logic here
