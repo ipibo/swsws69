@@ -37,7 +37,19 @@ defineProps({
 })
 </script>
 
-<style scoped>
+<style>
+/* Define the blinking animation */
+@keyframes blink {
+  0% {
+    color: inherit;
+  }
+  50% {
+    color: white;
+  }
+  100% {
+    color: inherit;
+  }
+}
 /* Set initial opacity to 1 so it's visible */
 .blinking-element {
   opacity: 1;
