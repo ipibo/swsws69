@@ -3,9 +3,9 @@
     <titlesExhibitions />
 
     <Menu currentMenu="exhibitions" class="mb-10 px-[32px]"></Menu>
-    <div class="bg-blue-800 text-white p-10 mb-10">
+    <!-- <div class="bg-blue-800 text-white p-10 mb-10">
       <code class="text-xs">{{ page?.data.slices[0] }}</code>
-    </div>
+    </div> -->
     <div class="flex flex-col px-[32px] min-h-screen md:grid md:grid-cols-6">
       <blocksExhibition
         class="transition ease-in duration-300 col-start-3 col-span-4 self-start"
