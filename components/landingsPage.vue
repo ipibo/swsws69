@@ -95,14 +95,4 @@ changeColors()
     color: inherit;
   }
 }
-
-/* Set initial opacity to 1 so it's visible */
-.blinking-element {
-  opacity: 1;
-}
-
-/* Apply the blinking effect on hover */
-.blinking-element:hover {
-  animation: blink 0.5s infinite; /* You can adjust the duration on hover */
-}
 </style>
