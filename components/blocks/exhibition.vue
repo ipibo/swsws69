@@ -7,8 +7,9 @@
       <div class="font-bold">{{ exhibitionName }}</div>
       <div class="font-bold">{{ artistName }}</div>
       <div class="font-bold">
-        {{ new Date(startDate).toLocaleDateString().replace(/\//g, ".") }} -
-        {{ new Date(endDate).toLocaleDateString().replace(/\//g, ".") }}
+        {{ new Date(startDate).toLocaleDateString("nl-NL").replace(/-/g, ".") }}
+        -
+        {{ new Date(endDate).toLocaleDateString("nl-NL").replace(/-/g, ".") }}
       </div>
     </div>
     <img class="w-full" :src="image" />
