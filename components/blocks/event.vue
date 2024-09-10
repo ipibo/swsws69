@@ -7,9 +7,9 @@
       <div class="font-bold">{{ exhibitionName }}</div>
       <div class="font-bold">{{ artistName }}</div>
       <div class="font-bold">
-        {{ new Date("09-05-2024").toLocaleDateString().replace(/\//g, ".") }}
+        {{ new Date("20-09-2024").toLocaleDateString().replace(/\//g, ".") }}
 
-        <div>14:00 - 17:00</div>
+        <div>20:00 - late</div>
       </div>
     </div>
     <img class="w-full" :src="image" />
