@@ -7,7 +7,8 @@
       <div class="font-bold">{{ exhibitionName }}</div>
       <div class="font-bold">{{ artistName }}</div>
       <div class="font-bold">
-        {{ new Date("09-20-2024").toLocaleDateString().replace(/\//g, ".") }}
+        <!-- {{ new Date("09-20-2024").toLocaleDateString().replace(/\//g, ".") }} -->
+        20.09.2024
 
         <div>20:00 - late</div>
       </div>
