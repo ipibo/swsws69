@@ -18,16 +18,18 @@
     <a href="https://iboibelings.nl/" class="blinking-element"> Ibo Ibelings</a
     >,
     <a href="https://jellereith.nl/" class="blinking-element">Jelle Reith</a>,
-    <a href="https://www.instagram.com/katrijnwestland" class="blinking-element"
+    <!-- <a href="https://www.instagram.com/katrijnwestland" class="blinking-element"
       >Katrijn Westland</a
+    >, -->
+    <a href="https://wang-xoo.webflow.io/" class="blinking-element">Huy Tran</a
     >,
     <a href="https://sjefvanbeers.com/" class="blinking-element">
       Sjef van Beers</a
-    >,
-    <a href="https://sjoerdmol.com/" class="blinking-element">Sjoerd Mol </a>&
-    <a href="https://www.instagram.com/tesshavas/" class="blinking-element"
+    >&
+    <a href="https://sjoerdmol.com/" class="blinking-element">Sjoerd Mol </a>.
+    <!-- <a href="https://www.instagram.com/tesshavas/" class="blinking-element"
       >Tess Havas</a
-    >.
+    >. -->
   </div>
 </template>
 
