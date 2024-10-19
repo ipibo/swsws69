@@ -21,12 +21,12 @@
     <!-- <a href="https://www.instagram.com/katrijnwestland" class="blinking-element"
       >Katrijn Westland</a
     >, -->
-    <a href="https://wang-xoo.webflow.io/" class="blinking-element">Huy Tran</a
+    <a href="https://wang-xoo.webflow.io/" class="blinking-element">Wang Xoo</a
     >,
     <a href="https://sjefvanbeers.com/" class="blinking-element">
       Sjef van Beers</a
-    >&
-    <a href="https://sjoerdmol.com/" class="blinking-element">Sjoerd Mol </a>.
+    >
+    & <a href="https://sjoerdmol.com/" class="blinking-element">Sjoerd Mol </a>.
     <!-- <a href="https://www.instagram.com/tesshavas/" class="blinking-element"
       >Tess Havas</a
     >. -->
