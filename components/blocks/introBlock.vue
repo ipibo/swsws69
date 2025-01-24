@@ -1,7 +1,8 @@
 <template>
   <img
     class="rounded-xl"
-    src="https://images.prismic.io/swsws69/c371a755-f41a-4966-be11-93d35889062f_DSC08301-verkleind.jpg?auto=format,compress"
+    
+    src="https://images.prismic.io/swsws69/Z5N3C5bqstJ990Py_DSC08471.jpg?auto=format,compress"
     alt=""
   />
   <div :class="textColor">
