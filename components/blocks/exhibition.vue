@@ -1,6 +1,6 @@
 <template>
   <div
-    class="transition ease-in duration-300 rounded-[40px] border-[2px] text-[36px] leading-[40px]"
+    class="transition ease-in duration-300 rounded-[40px] border-[2px] text-[36px] leading-[40px] mt-[20px] mb-[20px]"
     :class="borderColor"
   >
     <div class="p-[40px] transition ease-in duration-300" :class="textColor">
