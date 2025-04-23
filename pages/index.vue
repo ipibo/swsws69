@@ -64,7 +64,7 @@ const flipAccesibility = () => {
 </script>
 
 <template>
-  <div class="transition ease-in duration-300" :class="backgroundColor">
+  <div class="transition ease-in duration-300 pb-96" :class="backgroundColor">
     <div class="font-customFont text-lg mx-auto max-w-7xl">
       <LandingsPage class="mb-20" id="landingsPage"></LandingsPage>
       <Exhibitions id="exhibitions" class="mb-20" />
