@@ -14,7 +14,7 @@
     </div>
     <img class="w-full" :src="image" />
     <div class="p-4" :class="textColor">
-      <div class="mt-4 font-light mb-2 text-[24px]">
+      <div class="mt-4 font-light mb-2 text-[24px] mobile-description">
         {{ description }}
       </div>
     </div>
@@ -49,3 +49,11 @@ const props = defineProps({
   description: String,
 })
 </script>
+
+<style scoped>
+@media (max-width: 768px) {
+  .mobile-description {
+    line-height: 1.3em;
+  }
+}
+</style>
