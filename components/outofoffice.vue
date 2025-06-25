@@ -5,7 +5,7 @@
     <div
       class="flex border-[2px] border-secondaryBlue text-secondaryBlue mb-10 mt-10 rounded-[40px] p-4 min-h-[200px]"
     >
-      Hier kunnen we nog wel een beschrijving oid neerzetten van de expo
+      Here we can put a description or something about the exhibition
     </div>
 
     <div v-for="(slice, index) in page?.data.slices" :key="index">
