@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type PageDocumentDataSlicesSlice =
+  | OutOfOfficeWorkSlice
   | ExhibitionsSlice
   | InfoTextSlice
   | EventBlockSlice;
@@ -306,6 +307,96 @@ export type InfoTextSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *OutOfOfficeWork → Primary*
+ */
+export interface OutOfOfficeWorkSliceDefaultPrimary {
+  /**
+   * title field in *OutOfOfficeWork → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: out_of_office_work.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  title: prismic.RichTextField;
+
+  /**
+   * artist name field in *OutOfOfficeWork → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: out_of_office_work.primary.artist_name
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  artist_name: prismic.RichTextField;
+
+  /**
+   * header image field in *OutOfOfficeWork → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: out_of_office_work.primary.header_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  header_image: prismic.ImageField<never>;
+
+  /**
+   * description field in *OutOfOfficeWork → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: out_of_office_work.primary.description
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *OutOfOfficeWork → Items*
+ */
+export interface OutOfOfficeWorkSliceDefaultItem {
+  /**
+   * images field in *OutOfOfficeWork → Items*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: out_of_office_work.items[].images
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  images: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for OutOfOfficeWork Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type OutOfOfficeWorkSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<OutOfOfficeWorkSliceDefaultPrimary>,
+  Simplify<OutOfOfficeWorkSliceDefaultItem>
+>;
+
+/**
+ * Slice variation for *OutOfOfficeWork*
+ */
+type OutOfOfficeWorkSliceVariation = OutOfOfficeWorkSliceDefault;
+
+/**
+ * OutOfOfficeWork Shared Slice
+ *
+ * - **API ID**: `out_of_office_work`
+ * - **Description**: OutOfOfficeWork
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type OutOfOfficeWorkSlice = prismic.SharedSlice<
+  "out_of_office_work",
+  OutOfOfficeWorkSliceVariation
+>;
+
+/**
  * Default variation for TestSlice Slice
  *
  * - **API ID**: `default`
@@ -408,6 +499,11 @@ declare module "@prismicio/client" {
       InfoTextSliceDefaultPrimary,
       InfoTextSliceVariation,
       InfoTextSliceDefault,
+      OutOfOfficeWorkSlice,
+      OutOfOfficeWorkSliceDefaultPrimary,
+      OutOfOfficeWorkSliceDefaultItem,
+      OutOfOfficeWorkSliceVariation,
+      OutOfOfficeWorkSliceDefault,
       TestSliceSlice,
       TestSliceSliceVariation,
       TestSliceSliceDefault,

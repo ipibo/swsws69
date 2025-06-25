@@ -17,6 +17,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "out_of_office_work": {
+              "type": "SharedSlice"
+            },
             "exhibitions": {
               "type": "SharedSlice"
             },

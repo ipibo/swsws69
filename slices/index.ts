@@ -7,6 +7,9 @@ export const components = defineSliceZoneComponents({
   event_block: defineAsyncComponent(() => import("./EventBlock/index.vue")),
   exhibitions: defineAsyncComponent(() => import("./Exhibitions/index.vue")),
   info_text: defineAsyncComponent(() => import("./InfoText/index.vue")),
+  out_of_office_work: defineAsyncComponent(
+    () => import("./OutOfOfficeWork/index.vue"),
+  ),
   test_slice: defineAsyncComponent(() => import("./TestSlice/index.vue")),
   title_block: defineAsyncComponent(() => import("./TitleBlock/index.vue")),
 });
