@@ -392,21 +392,6 @@ export interface OutOfOfficeWorkSliceDefaultPrimary {
 }
 
 /**
- * Primary content in *OutOfOfficeWork → Items*
- */
-export interface OutOfOfficeWorkSliceDefaultItem {
-  /**
-   * images field in *OutOfOfficeWork → Items*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: out_of_office_work.items[].images
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  images: prismic.ImageField<never>;
-}
-
-/**
  * Default variation for OutOfOfficeWork Slice
  *
  * - **API ID**: `default`
@@ -416,7 +401,7 @@ export interface OutOfOfficeWorkSliceDefaultItem {
 export type OutOfOfficeWorkSliceDefault = prismic.SharedSliceVariation<
   "default",
   Simplify<OutOfOfficeWorkSliceDefaultPrimary>,
-  Simplify<OutOfOfficeWorkSliceDefaultItem>
+  never
 >;
 
 /**
@@ -541,7 +526,6 @@ declare module "@prismicio/client" {
       InfoTextSliceDefault,
       OutOfOfficeWorkSlice,
       OutOfOfficeWorkSliceDefaultPrimary,
-      OutOfOfficeWorkSliceDefaultItem,
       OutOfOfficeWorkSliceVariation,
       OutOfOfficeWorkSliceDefault,
       TestSliceSlice,

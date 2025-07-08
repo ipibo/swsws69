@@ -5,7 +5,7 @@
     </NuxtLink>
     <!-- <Menu currentMenu="exhibitions" class="mb-10 px-[32px]"></Menu> -->
     <div
-      class="flex border-[2px] border-secondaryBlue text-secondaryBlue mb-10 mt-10 rounded-[40px] p-4 min-h-[200px]"
+      class="flex border-[2px] border-secondaryBlue text-secondaryBlue mb-10 mt-10 rounded-[40px] p-4 min-h-[200px] w-full"
     >
       <OutofofficeHeaderImage
         v-if="areas.length > 0"
@@ -30,7 +30,7 @@
           :exhibitionName="slice.primary.title[0].text"
           :artistName="slice.primary.artist_name[0].text"
           :image="slice.primary.header_image.url"
-          :description="slice.primary.description[0].text"
+          :description="slice.primary.description"
         ></BlocksOutofoffice>
       </div>
     </div>
@@ -54,6 +54,7 @@ import OutofofficeHeaderImage from "./outofoffice/headerImage.vue"
 import { ref } from "vue"
 
 const areas = ref([])
+// console.log(page)
 
 watchEffect(() => {
   if (page.value && page.value.data.slices) {

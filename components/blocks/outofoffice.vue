@@ -10,9 +10,7 @@
     </div>
     <img class="w-full" :src="image" />
     <div class="p-4" :class="textColor">
-      <div class="mt-4 font-light mb-2 text-[24px] mobile-description">
-        {{ description }}
-      </div>
+      <PrismicRichText :field="description" />
     </div>
   </div>
 </template>
@@ -39,9 +37,8 @@ changeColors()
 const props = defineProps({
   exhibitionName: String,
   artistName: String,
-
   image: String,
-  description: String,
+  description: Array,
 })
 </script>
 
@@ -51,4 +48,6 @@ const props = defineProps({
     line-height: 1.3em;
   }
 }
+
+
 </style>

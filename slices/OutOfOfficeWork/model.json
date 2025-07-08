@@ -76,16 +76,7 @@
           }
         }
       },
-      "items": {
-        "images": {
-          "type": "Image",
-          "config": {
-            "label": "images",
-            "constraint": {},
-            "thumbnails": []
-          }
-        }
-      }
+      "items": {}
     }
   ]
 }

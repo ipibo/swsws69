@@ -1,7 +1,7 @@
 <template>
   <div class="relative w-full">
     <img
-      src="@/assets/signal-2025-07-07-220718.jpeg"
+      src="@/assets/signal-2025-07-08-112756_002.png"
       alt="Out of Office Header"
       class="header-image"
     />
@@ -68,8 +68,8 @@ function handleClick(idx) {
     opacity 0.2s;
   z-index: 2;
   opacity: 0.5;
-  border: 2px solid rgba(0, 0, 255, 1);
-  border-radius: 20px;
+  /* border: 5px solid rgba(0, 0, 255, 1); */
+  /* border-radius: 20px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,7 +85,7 @@ function handleClick(idx) {
   user-select: none;
 }
 .blinking {
-  animation: blink-bg 1.2s cubic-bezier(0.4, 0, 0.2, 1) 1;
+  animation: blink-bg 2.2s cubic-bezier(0.4, 0, 0.2, 1) 1;
 }
 @keyframes blink-bg {
   0% {
@@ -100,9 +100,7 @@ function handleClick(idx) {
   60% {
     opacity: 0.2;
   }
-  80% {
-    opacity: 1;
-  }
+  
   100% {
     opacity: 0.4;
   }

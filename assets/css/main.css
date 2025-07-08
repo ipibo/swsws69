@@ -14,12 +14,10 @@
 
 html {
   scroll-behavior: smooth;
-
 }
-body{
+body {
   overscroll-behavior-y: none;
   /* padding-bottom: 200px; */
-
 }
 
 .red {
@@ -37,4 +35,15 @@ body{
 .grey {
   fill: #0f0f0f;
   transition: ease-in 300ms;
+}
+
+p {
+  margin-bottom: 1em;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  hyphens: auto;
+}
+
+p:empty {
+  margin-bottom: 1em;
 }
