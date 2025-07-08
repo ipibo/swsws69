@@ -4,15 +4,19 @@
       <titlesSwsws69 />
     </NuxtLink>
     <!-- <Menu currentMenu="exhibitions" class="mb-10 px-[32px]"></Menu> -->
-    <div
+    <!-- <div
       class="flex border-[2px] border-secondaryBlue text-secondaryBlue mb-10 mt-10 rounded-[40px] p-4 min-h-[200px] w-full"
-    >
+    > -->
+    <div class="p-8 mt-10">
+
+
       <OutofofficeHeaderImage
-        v-if="areas.length > 0"
-        :areas="areas"
-        @area-click="scrollToTarget"
+      v-if="areas.length > 0"
+      :areas="areas"
+      @area-click="scrollToTarget"
       />
     </div>
+    <!-- </div> -->
 
     <!-- Target section for clickable area -->
     <!-- <div  class="mb-10"></div> -->
