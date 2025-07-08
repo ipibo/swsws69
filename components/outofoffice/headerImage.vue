@@ -81,7 +81,6 @@ function handleClick(idx) {
   color: #fff;
   font-size: 2rem;
   font-weight: bold;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
   pointer-events: none;
   user-select: none;
 }
