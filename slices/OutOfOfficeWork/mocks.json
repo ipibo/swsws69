@@ -2,7 +2,28 @@
 	{
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
-		"primary": {},
+		"primary": {
+			"top": {
+				"__TYPE__": "FieldContent",
+				"value": "27",
+				"type": "Number"
+			},
+			"left": {
+				"__TYPE__": "FieldContent",
+				"value": "75",
+				"type": "Number"
+			},
+			"width": {
+				"__TYPE__": "FieldContent",
+				"value": "85",
+				"type": "Number"
+			},
+			"height": {
+				"__TYPE__": "FieldContent",
+				"value": "62",
+				"type": "Number"
+			}
+		},
 		"items": [
 			{
 				"__TYPE__": "GroupItemContent",

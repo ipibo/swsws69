@@ -349,6 +349,46 @@ export interface OutOfOfficeWorkSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   description: prismic.RichTextField;
+
+  /**
+   * top field in *OutOfOfficeWork → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: out_of_office_work.primary.top
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  top: prismic.NumberField;
+
+  /**
+   * left field in *OutOfOfficeWork → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: out_of_office_work.primary.left
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  left: prismic.NumberField;
+
+  /**
+   * width field in *OutOfOfficeWork → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: out_of_office_work.primary.width
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  width: prismic.NumberField;
+
+  /**
+   * height field in *OutOfOfficeWork → Primary*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: out_of_office_work.primary.height
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  height: prismic.NumberField;
 }
 
 /**

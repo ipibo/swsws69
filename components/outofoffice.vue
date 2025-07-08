@@ -7,11 +7,21 @@
     <div
       class="flex border-[2px] border-secondaryBlue text-secondaryBlue mb-10 mt-10 rounded-[40px] p-4 min-h-[200px]"
     >
-      Here we can put a description or something about the exhibition
+      <OutofofficeHeaderImage
+        v-if="areas.length > 0"
+        :areas="areas"
+        @area-click="scrollToTarget"
+      />
     </div>
 
+    <!-- Target section for clickable area -->
+    <!-- <div  class="mb-10"></div> -->
+
     <div v-for="(slice, index) in page?.data.slices" :key="index">
-      <div class="flex flex-col px-[32px] md:grid md:grid-cols-6">
+      <div
+        class="flex flex-col px-[32px] md:grid md:grid-cols-6"
+        :id="`section-${index}`"
+      >
         <BlocksOutofoffice
           :class="[
             'transition ease-in duration-300 col-span-4 self-start',
@@ -40,15 +50,41 @@ const { data: page } = useAsyncData(`[page-uid-${route.params.uid}]`, () =>
   prismic.client.getByUID("page", "outofoffice")
 )
 
-const generateRandomImageUrl = (width = 3000, height = 2000) => {
-  const randomString = Math.random().toString(36).substring(2, 12)
-  return `https://picsum.photos/seed/${randomString}/${width}/${height}`
-}
+import OutofofficeHeaderImage from "./outofoffice/headerImage.vue"
+import { ref } from "vue"
 
-const numberOfImages = 5
-const listWithRandomImageUrl = Array.from({ length: numberOfImages }, () =>
-  generateRandomImageUrl()
-)
+const areas = ref([])
+
+watchEffect(() => {
+  if (page.value && page.value.data.slices) {
+    areas.value = page.value.data.slices.map((slice, index) => ({
+      left:
+        typeof slice.primary.left === "number"
+          ? slice.primary.left + "%"
+          : slice.primary.left,
+      top:
+        typeof slice.primary.top === "number"
+          ? slice.primary.top + "%"
+          : slice.primary.top,
+      width:
+        typeof slice.primary.width === "number"
+          ? slice.primary.width + "%"
+          : slice.primary.width,
+      height:
+        typeof slice.primary.height === "number"
+          ? slice.primary.height + "%"
+          : slice.primary.height,
+      target: `section-${index}`,
+    }))
+  }
+})
+
+function scrollToTarget(target) {
+  const el = document.getElementById(target)
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "start" })
+  }
+}
 </script>
 
 <style scoped></style>

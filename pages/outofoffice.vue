@@ -66,6 +66,7 @@ const flipAccesibility = () => {
 <template>
   <div class="transition ease-in duration-300 pb-96" :class="backgroundColor">
     <div class="font-customFont text-lg mx-auto max-w-7xl">
+      <!-- hallo -->
       <Outofoffice id="exhibitions" class="mb-20" />
     </div>
 

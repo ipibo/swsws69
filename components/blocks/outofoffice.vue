@@ -2,6 +2,7 @@
   <div
     class="transition ease-in duration-300 rounded-[40px] border-[2px] text-[36px] leading-[40px] mt-[20px] mb-[20px]"
     :class="borderColor"
+    ref="section1"
   >
     <div class="p-[40px] transition ease-in duration-300" :class="textColor">
       <div class="font-bold">{{ exhibitionName }}</div>
