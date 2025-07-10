@@ -1,8 +1,8 @@
 <template>
   <div>
-    <NuxtLink to="/">
-      <titlesSwsws69 />
-    </NuxtLink>
+    <!-- <NuxtLink to="/"> -->
+      <titlesOutofoffice />
+    <!-- </NuxtLink> -->
     <!-- <Menu currentMenu="exhibitions" class="mb-10 px-[32px]"></Menu> -->
     <!-- <div
       class="flex border-[2px] border-secondaryBlue text-secondaryBlue mb-10 mt-10 rounded-[40px] p-4 min-h-[200px] w-full"

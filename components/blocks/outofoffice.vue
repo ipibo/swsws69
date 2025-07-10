@@ -9,7 +9,7 @@
       <div class="font-bold">{{ artistName }}</div>
     </div>
     <img class="w-full" :src="image" />
-    <div class="p-4" :class="textColor">
+    <div class="p-4 font-light mb-2 text-[24px] mobile-description" :class="textColor">
       <PrismicRichText :field="description" />
     </div>
   </div>
