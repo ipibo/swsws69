@@ -39,9 +39,18 @@ body {
 
 p {
   margin-bottom: 1em;
+  /* overflow-wrap: break-word;
+  word-break: break-all;
+  hyphens: auto; */
+}
+
+a{
+ 
+  margin-bottom: 1em;
   overflow-wrap: break-word;
   word-break: break-all;
   hyphens: auto;
+
 }
 
 p:empty {
