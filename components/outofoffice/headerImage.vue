@@ -1,7 +1,7 @@
 <template>
   <div class="relative w-full">
     <img
-      src="@/assets/signal-2025-07-08-112756_002.png"
+      src="@/assets/signal-2025-07-10-113848_002.png"
       alt="Out of Office Header"
       class="header-image"
     />
